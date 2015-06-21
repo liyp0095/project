@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Carousel Template for Bootstrap</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/static/css/graph.css" rel="stylesheet"/>
+
+        <script type='text/javascript' src="/static/js/jquery.min.js"></script>
+        <script type='text/javascript' src="/static/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/static/lib/d3.js"></script>
+        <script type="text/javascript" src="/static/js/data_process.js"></script>
+        <script type="text/javascript" src="/static/js/coefficientGraph.js"></script>
+        <script type="text/javascript" src="/static/js/coefficient.js"></script>
+
+        <!-- 如果元素中的内容超出了给定的宽度和高度属性，overflow 属性可以确定是否显示滚动条等行为。 -->
+
+        <script>
+
+
+        </script>
+
+    </head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand">
+            Cluster Coefficient
+          </a>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <!-- end left sidebar-->
+            <div class="col-md-6">
+                <!-- Split button -->
+                <div class="btn-group">
+                    <button id="Institute_one" type="button" class="btn btn-primary">计算机学院</button>
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a id="cs_institute_one">计算机学院</a></li>
+                        <li><a id="ee_institute_one">电子学院</a></li>
+                    </ul>
+                </div>
+                <div id="graph_one" class="jumbotron">
+
+                </div>
+                <h4>Coefficient is: <span id="coefficient_one" class="label label-success"></span></h4>
+
+
+            </div>
+
+            <div class="col-md-6">
+                <div class="btn-group">
+                    <button id="Institute_two" type="button" class="btn btn-primary">计算机学院</button>
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a id="cs_institute_two">计算机学院</a></li>
+                        <li><a id="ee_institute_two">电子学院</a></li>
+                    </ul>
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="submit_coefficience" type="button" class="btn btn-success">提交</button>
+                <div id="graph_two" class="jumbotron">
+                    
+
+                </div>
+                <h4>Coefficient is: <span id="coefficient_two" class="label label-success"></span></h4>
+
+
+            </div>
+        </div>
+
+    </div>
+    </div>
+</body>
+</html>

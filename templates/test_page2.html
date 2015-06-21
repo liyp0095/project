@@ -1,0 +1,27 @@
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Test Page2</title>
+    
+    <script type="text/javascript">
+
+        var aca1_data = {{ aca1_data | tojson | safe }};
+        var aca2_data = {{ aca2_data | tojson | safe }};
+
+        alert(aca1_data);
+        alert(aca2_data);
+
+        console.log(aca1_data);
+        console.log(aca2_data);
+    </script>
+
+</head>
+
+<body style="margin: 300px">
+    
+    <p align="center">
+        Page 2
+    </p>
+
+</body>
+</html>

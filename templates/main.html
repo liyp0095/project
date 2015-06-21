@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+    <title>Network Measures</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/zyUpload.css" type="text/css">
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+		<!-- 引用核心层插件 -->
+	<script type="text/javascript" src="../static/js/zyFile.js"></script>
+		<!-- 引用控制层插件 -->
+	<script type="text/javascript" src="../static/js/zyUpload.js"></script>
+		<!-- 引用初始化JS -->
+	<script type="text/javascript" src="../static/js/demo.js"></script>
+
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/carousel.css" rel="stylesheet">
+    <script type="text/javascript">
+
+        function post(url, params) {
+
+            var form = document.createElement("form");
+
+            form.action = url;
+            form.method = "post";
+            form.style.display = "none";
+            
+            for (var x in params) {
+            
+                var opt = document.createElement("textarea"); 
+                opt.name = x;
+                opt.value = params[x];
+
+                form.appendChild(opt);
+            }
+
+            document.body.appendChild(form);
+
+            form.submit();
+
+            return form;
+        }
+    </script>
+
+      <script>
+          $(document).ready(function(){
+              $('#upload_file').click(function () {
+
+                    $.getJSON('/upload_file/',
+                            function (data) {
+                                console.log("ok");
+                            }
+                    );
+                });
+
+          });
+      </script>
+
+
+  </head>
+  <body>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide" src="/static/img/hero-careers.jpg" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="large_font">Network Measures</h1>
+              <p class="medium_font">In social media,we often face similar tasks in which measuring different structural properties of a social media network can help us better understand individuals embedded in it.</p>
+              <p><a class="btn btn-lg btn-primary" href="#centrality" role="button">View more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide" src="/static/img/hero-platform.jpg" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="large_font">What we do</h1>
+                <ul class="list-unstyled">
+                   <li class="medium_font">Who are the central figures(influential individuals)in the network?</li>
+                   <li class="medium_font">What interaction patterns are common in friends?</li>
+                   <li class="medium_font">Who are the <em>like-minded</em> users and how can we find these similar individuals?</li>
+                </ul>
+              <p><a class="btn btn-lg btn-primary" href="#centrality" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide" src="/static/img/hero-company-careers.jpg" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="large_font">Our Team</h1>
+                <ul class="list-unstyled">
+                  <li class="medium_font">Yuepei Li</li>
+                  <li class="medium_font">Lihui Liu</li>
+                  <li class="medium_font">Zhenhui Liu</li>
+                  <li class="medium_font">Renlin Hu</li>
+                  <li class="medium_font">Xiaoqiang Wu</li>
+                  <li class="medium_font">Hailu Wang</li>
+                  <li class="medium_font">Xinpan Yang</li>
+                </ul>
+              <p><a class="btn btn-lg btn-primary" href="#centrality" role="button">Join Now</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <div>
+        <form action="/upload_file/" method=post enctype=multipart/form-data>
+          <p>
+              <input type=file name=file>
+              <input type=submit value=Upload>
+          </p>
+        </form>
+      </div>
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div id="centrality" class="col-lg-4">
+          <img class="img-circle" src="/static/img/hero-company.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h1 class="body_large_font">Centrality</h1>
+          <p class="body_medium_font">Centrality defines how important a node is within a network.We will use the following methods to compute centrality.</p>
+            <ul>
+              <li style="font-family: Raleway;font-size: 16px;">Degree Centrality</li>
+              <li style="font-family: Raleway;font-size: 16px">Eigenvector Centrality</li>
+              <li style="font-family: Raleway;font-size: 16px">Katz Centrality</li>
+              <li style="font-family: Raleway;font-size: 16px">PageRank</li>
+              <li style="font-family: Raleway;font-size: 16px">Betweenness Centraity</li>
+              <li style="font-family: Raleway;font-size: 16px">Closeness Centrality</li>
+              <li style="font-family: Raleway;font-size: 16px">Group Centrality</li>
+            </ul>
+          <p><a class="btn btn-success" id="goto_centrality" role="button" href="javascript:;", onclick="javascript:post('/centrality/0')">View details</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="/static/img/hero-down-2.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h1 class="body_large_font">Clustering</h1>
+          <p class="body_medium_font">Often we need observe a specific behavior in a social media network.One such behavior is linking behavior.Linking behavior determines how links(edges) are formed in a social graph.</p>
+          <p><a class="btn btn-success" id="goto_coefficience" role="button" href="javascript:;", onclick="javascript:post('/coefficience/0')">View details</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="/static/img/hero-down-3.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h1 class="body_large_font">Similarity</h1>
+          <p class="body_medium_font">In social media,nodes can represent individuals in a friendship network or products that are related.When using network information, the similarity between two nodes can be computed by measuring their <em>structural equivalence</em> or their <em>regular equivalence</em></p>
+          <p><a class="btn btn-success" id="goto_equivalence" role="button" href="javascript:;", onclick="javascript:post('/equivalenc/0')">View details</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <!--<footer>-->
+      <!--<p class="pull-right"><a href="#">Back to top</a></p>-->
+      <!--<p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>-->
+      <!--</footer>
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+</html>

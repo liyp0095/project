@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+    <title>computeEquivalence</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/graph.css" rel="stylesheet"/>
+	
+	<script type='text/javascript' src="/static/lib/jQuery.js"></script>
+    <script type='text/javascript' src="/static/js/bootstrap.min.js"></script>
+	
+    <script type="text/javascript" src="/static/lib/d3.js"></script>
+    <script type="text/javascript" src="/static/js/equivalenceGraph.js"></script>
+    <script type='text/javascript' src="/static/js/equivalence_starlist.js"></script>
+	<script type='text/javascript' src="/static/js/equivalence.js"></script>
+
+	
+  </head>
+  
+ <body>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand">Equivelance</a>
+			</div>
+			<!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<label for="InputFileOne" class="navbar-brand">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;导入文件</label>
+				<input type="button" id="InputFileOne" class="navbar-brand" style="width: 70px; height: 30px; margin-top: 10px; vertical-align: middle; padding:3px;" value="打开"> -->
+				
+				<form class="navbar-form navbar-right" role="search" >
+					<div class="form-group">
+					<input type="text" class="form-control" placeholder="输入个人ID" id="input_id_fsdfdsfsd">
+					</div>
+				  <button class="btn btn-default" id="afsdafsdfasdfsdafsdfsafdadfad" type="button">提交</button>
+				</form>
+			</div>
+		</div>
+	</nav>
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="col-md-9">
+				<div class="btn-group btn-group-justified" role="group" aria-label="...">
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-info" id="structral_id">Structural Equivelance</button>
+					</div>
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-info" id="regularity_id">Regularity Equivelance</button>
+					</div>
+				</div>
+				<div class="container-fluid" id="graph_eq" style="background: #ffffff;">
+
+                </div>
+			</div>
+			<div class="col-md-3">
+				<div class="list-group" id="star-list">
+				</div>
+				
+				<div class="panel panel-default">
+				  <div class="panel-heading" id="panel_head"></div>
+				  <div class="panel-body" id="panel_body">
+					<br>
+				  </div>
+				</div> 
+			</div>
+		</div>
+		
+	</div>
+ 
+ </body>
+ </html>

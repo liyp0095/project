@@ -1,0 +1,61 @@
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Page 1</title>
+
+    <script type="text/javascript">
+
+        function post(url, params) {
+
+            var form = document.createElement("form");
+
+            form.action = url;
+            form.method = "post";
+            form.style.display = "none";
+            
+            for (var x in params) {
+            
+                var opt = document.createElement("textarea"); 
+                opt.name = x;
+                opt.value = params[x];
+
+                form.appendChild(opt);
+            }
+
+            document.body.appendChild(form);
+
+            form.submit();
+
+            return form;
+        }
+
+        var jsonData = {{ data | tojson | safe }};
+
+        alert(jsonData);
+
+        console.log(jsonData);
+
+    </script>
+
+</head>
+
+<body style="margin: 200px 300px;">
+    <p>从首页导航过来：</p>
+    <a href="javascript:;", onclick="javascript:post('/page1/1')">全校学生</a>
+
+    <p>Page 1：</p>
+    <form action="page1/2", method="post", id='acaForm', name="acaForm">
+        选择学院<select id="acaId", onchange="this.form.submit()", name="acaId">
+            <option value=10 selected="selected">Choose an academy</option>
+            <option value=0 >学院 1</option>
+            <option value=1 >学院 2</option>
+        </select>
+    </form>
+
+    <form action="/page1/3", method="post", id='stuForm', name="stuForm">
+        请输入学生编号：<input type="text", name="stuId", id="stuId">
+        <input type="submit" name="submit" id="submit">
+    </form>
+
+</body>
+</html>
